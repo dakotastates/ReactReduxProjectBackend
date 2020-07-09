@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       post '/users', to: 'users#create'
       get '/users', to: 'users#index'
       patch '/users/:id', to: 'users#update'
+      get '/users/:id', to: 'users#show'
+      post '/comments', to: 'comments#create'
     end
   end
 end
