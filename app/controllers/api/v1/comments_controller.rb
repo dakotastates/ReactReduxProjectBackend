@@ -1,5 +1,12 @@
 class Api::V1::CommentsController < ApplicationController
   skip_before_action :authorized, only: [:create]
+
+  def index
+    @comments = Comment.all
+    # byebug
+    render json: @comments
+  end
+
   def create
 
     @comment = Comment.create(comment_params)

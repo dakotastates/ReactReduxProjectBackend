@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       patch '/users/:id', to: 'users#update'
       get '/users/:id', to: 'users#show'
       post '/comments', to: 'comments#create'
+      get '/comments', to: 'comments#index'
     end
   end
 end
